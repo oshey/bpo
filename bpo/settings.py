@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.sites',
     'django_countries',
+    'jobs',
 
     # AllAuth apps
     'allauth',
