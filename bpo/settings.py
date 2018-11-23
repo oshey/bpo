@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.sites',
     'django_countries',
+    'accounts',
     'jobs',
 
     # AllAuth apps
@@ -145,4 +146,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 SITE_ID = 1
+
+DEFAULT_PAGE_SIZE = 15
+
+AUTH_USER_MODEL = 'accounts.User'
