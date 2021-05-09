@@ -1,1 +1,35 @@
-{% extend 'project/single_page.html' %}
+{% extends 'project/single_page.html' %}
+
+{% block container %}
+
+<div class="row">
+    <div class="col-3"></div>
+
+    <div class="col-6">
+
+        {% for job in job_list %}
+        <div class="card rounded-0 mb-4">
+            <div class="card-body">
+
+                <p class="card-title"><a href="#">{{ job }}</a></p>
+
+                <p class="card-subtitle mb-2 text-muted"> <span class="fas fa-building"></span> {{ job.emp }}</p>
+
+                <small class="text-muted">{{ job.content }}</small>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <small>Est. Salary: {{ job.est_salary }}</small>
+                     <small>Employment Terms: {{ job.terms }}</small>
+                    <small><span class="text-danger fas fa-map-marker-alt"></span> {{ job.job_location.country }}</small>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <div class="col-3"></div>
+</div>
+{% endblock %}
+

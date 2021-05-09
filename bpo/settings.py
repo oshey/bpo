@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.sites',
     'django_countries',
+    'ckeditor',
+    # 'ckeditor_uploader',
     'accounts',
     'jobs',
 
@@ -157,3 +159,15 @@ SITE_ID = 1
 DEFAULT_PAGE_SIZE = 15
 
 AUTH_USER_MODEL = 'accounts.User'
+
+MEDIA_ROOT = '/media/'
+
+CKEDITOR_CONFIGS = {
+    'basic_ckeditor': {
+        'toolbar': [['Bold', 'Italic', 'NumberedList', 'BulletedList']],
+        # 'width': '100%',
+        'extraPlugin': ['autogrow']
+    },
+}
+
+CKEDITOR_UPLOAD_PATH = "uploads/"

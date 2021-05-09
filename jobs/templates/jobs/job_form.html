@@ -1,0 +1,15 @@
+{% extends 'project/single_page.html' %}
+
+{% block container %}
+
+<div class="row justify-content-center">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ location_form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
+
